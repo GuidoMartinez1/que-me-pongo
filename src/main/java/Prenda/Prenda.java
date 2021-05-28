@@ -2,6 +2,7 @@ package Prenda;
 
 import Prenda.Material.Material;
 import Prenda.Material.Trama;
+import Prenda.TipoDePrenda.Categoria;
 import Prenda.TipoDePrenda.TipoDePrenda;
 
 public class Prenda {
@@ -21,6 +22,13 @@ public class Prenda {
         this.trama = trama;
         this.temperaturaMaxima = temperaturaMaxima;
     }
+
+    public static void validarCategoriaAtuendo(Prenda prenda, TipoDePrenda cat, exepcion) {
+            if(TipoDePrenda.getCategoria() != cat){
+                throw new Exepcion(exepcion);
+            }
+    }
+
 
     public TipoDePrenda getTipoDePrenda() {
         return tipoDePrenda;
@@ -45,4 +53,6 @@ public class Prenda {
     public double getTemperaturaMaxima() {
         return temperaturaMaxima;
     }
-}
+
+
+}}
